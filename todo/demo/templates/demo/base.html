@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="{% static 'demo/css/bootstrap.css' %}">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center alert alert-danger">To Do App</h2>
+    {% block content %} {% endblock content %}
+</div>
+<script src="{% static 'demo/js/bootstrap.js' %}"></script>
+</body>
+</html>

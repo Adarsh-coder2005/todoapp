@@ -1,0 +1,13 @@
+{% extends 'demo/base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-4">
+            <h4 class="text-center alert alert-info">Add New Task</h4>
+            <form action="{% url 'add' id%}" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <Button type="Submit" class="btn btn-success">Add</Button>
+                <a href="{% url 'show' author %}" class="btn btn-success">Details</a>
+            </form>
+        </div>
+{% endblock content %}
